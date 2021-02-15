@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rubik:wght@400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+}
+
+.main-container {
+    border: 3px solid grey;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4.8rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 3.6rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+p {
+    font-size: 2.5rem;
+}
+
+li {
+    font-size: 2rem;
+}
+
+@import "header";
+@import "intro";

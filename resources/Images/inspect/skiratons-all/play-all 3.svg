@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>play-all</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-index" transform="translate(-595.000000, -2471.000000)">
+            <g id="watch" transform="translate(60.000000, 1729.000000)">
+                <g id="video" filter="url(#filter-1)" transform="translate(90.000000, 503.000000)">
+                    <g id="play-all" transform="translate(474.000000, 248.000000)">
+                        <circle id="Oval" fill="#83F715" cx="24" cy="24" r="24"></circle>
+                        <path d="M31.6282582,23.0013825 L19.5387872,15.2100789 C18.8215775,14.8237912 18,14.8638836 18,16.250574 L18,31.5926262 C18,32.860312 18.881398,33.060138 19.5387872,32.6331213 L31.6282582,24.8418178 C32.1259139,24.3333434 32.1259139,23.5098568 31.6282582,23.0013825" id="play" fill="#01573E" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

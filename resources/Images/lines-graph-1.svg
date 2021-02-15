@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="116px" height="56px" viewBox="0 0 116 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>lines-graph-1</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-index" transform="translate(-222.000000, 0.000000)">
+            <g id="lines-graph-1" transform="translate(280.000000, 28.000000) rotate(-270.000000) translate(-280.000000, -28.000000) translate(252.000000, -30.000000)">
+                <polygon id="Fill-1" fill="#83F715" points="0.233203256 0.131256393 0.233203256 16.5877828 55.8662593 16.5877828 55.8662593 0.131256393"></polygon>
+                <polygon id="Fill-4" fill="#6E97CF" points="0.105358519 33.2224307 0.105358519 49.6789572 55.8662593 49.6789572 55.8662593 33.2224307"></polygon>
+                <polygon id="Fill-7" fill="#78B47C" points="0.105358519 66.3037532 0.105358519 82.7681611 55.8662593 82.7681611 55.8662593 66.3037532"></polygon>
+                <polygon id="Fill-10" fill="#DACD7B" points="0.105358519 99.4071438 0.105358519 115.867611 55.8662593 115.867611 55.8662593 99.4071438"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
