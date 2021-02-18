@@ -1,0 +1,15 @@
+.watch-container {
+    border-left: 2px solid black; //temporary
+    border-right: 2px solid black; //temporary
+    margin: 0 auto 143px auto;
+    max-width: 1440px;
+    padding: 0 60px;
+
+    .watch {
+        background: url(/resources/Images/Bitmap.png);
+        background-position: center;
+        color: #fff;
+        max-width: 1320px;
+        height: 873px;
+    }
+}
