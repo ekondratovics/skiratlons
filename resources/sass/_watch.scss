@@ -1,0 +1,100 @@
+.watch-container {
+    background-color:palegreen;
+    margin: 0 auto 143px auto;
+    max-width: 1440px;
+    padding: 0 60px;
+
+    .watch {
+        background: url(/resources/Images/Bitmap.png);
+        background-position: center;
+        color: #fff;
+        max-width: 1320px;
+        height: 873px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .watch-left {
+            width: 555px;
+
+            .left-top {
+                width: 457px;
+
+            }
+
+            .left-bottom {
+                background: url(/resources/Images/skiratlons-ep-01.png);
+                background-position: center;
+                width: 555px;
+                height: 336px;
+
+                h2 {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        .watch-right {
+            position: relative;
+            max-width: 458px;
+
+            .right-top {
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+                top: -72px;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    position: relative;
+                }
+
+                .right-top-text {
+                    background: rgb(0,0,0);
+                    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                
+                    h2 {
+                        margin: 10px 38px 0 0;
+                    }
+    
+                    p {
+                        margin: 5px 38px 38px 0;
+                        color: #83F715;
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+
+            .right-bottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    position: relative;
+                }
+
+                .right-bottom-description {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                h2 {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
