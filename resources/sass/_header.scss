@@ -1,28 +1,27 @@
 .header-container {
-    background-color:palegreen;
     height: 56px;
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 60px;
+}
 
-    header {
-        font-size: 1.6rem;
-        position: relative;
+header {
+    font-size: 1.6rem;
+    position: relative;
 
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            position: absolute;
-            top: 3rem;
-            left: -3rem;
-            transform: translate(-50%, -50%);
-        }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        position: absolute;
+        top: 3rem;
+        left: -3rem;
+        transform: translate(-50%, -50%);
+    }
 
-        img {
-            width: 116px;
-            height: auto;
-            position: absolute;
-            left: 162px;
-        }
+    img {
+        width: 116px;
+        height: auto;
+        position: absolute;
+        left: 162px;
     }
 }

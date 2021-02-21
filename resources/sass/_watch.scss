@@ -1,100 +1,149 @@
 .watch-container {
-    background-color:palegreen;
     margin: 0 auto 143px auto;
     max-width: 1440px;
     padding: 0 60px;
+}
 
-    .watch {
-        background: url(/resources/Images/Bitmap.png);
-        background-position: center;
-        color: #fff;
-        max-width: 1320px;
-        height: 873px;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
+.watch {
+    background: url(/resources/Images/Bitmap.png);
+    background-position: center;
+    color: #fff;
+    max-width: 1320px;
+    height: 873px;
+    position: relative;
+}
 
-        .watch-left {
-            width: 555px;
+.watch-content {
+    max-width: 1140px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 
-            .left-top {
-                width: 457px;
+.watch-left {
+    width: 555px;
+    margin-left: 15px;
+}
 
-            }
+.left-top {
+    padding: 139px 0 100px 100px;
 
-            .left-bottom {
-                background: url(/resources/Images/skiratlons-ep-01.png);
-                background-position: center;
-                width: 555px;
-                height: 336px;
+    h1 {
+        margin: 0;
+    }
 
-                h2 {
-                    font-size: 2.4rem;
-                }
-            }
-        }
+    p {
+        font-size: 2.1rem;
+        line-height: 35px;
+    }
+}
 
-        .watch-right {
-            position: relative;
-            max-width: 458px;
+.left-bottom {
+    position: relative;
+    width: 555px;
+    height: 336px;
+}
 
-            .right-top {
-                text-align: right;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                position: relative;
-                top: -72px;
+.left-bottom-img {
+    object-fit: cover;
+    width: 100%;
+}
 
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    position: relative;
-                }
+.left-bottom-description {
+    position: absolute;
+    bottom: 0;
+    padding: 0 25px;
+    display: flex;
 
-                .right-top-text {
-                    background: rgb(0,0,0);
-                    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                
-                    h2 {
-                        margin: 10px 38px 0 0;
-                    }
-    
-                    p {
-                        margin: 5px 38px 38px 0;
-                        color: #83F715;
-                        font-size: 2.1rem;
-                    }
-                }
-            }
+    h2 {
+        font-size: 2.4rem;
+    }
+}
 
-            .right-bottom {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                position: relative;
+.control-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    position: relative;
-                }
+    div {
+        margin: 0;
+        padding: 0;
 
-                .right-bottom-description {
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                }
-
-                h2 {
-                    font-size: 2.4rem;
-                }
-            }
+        img {
+            padding: 0 5px;
         }
     }
+}
+
+.watch-right {
+    max-width: 458px;
+    margin: 0 15px;
+}
+    
+.right-top {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    top: -72px;
+}
+
+.right-top-img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+}
+    
+.right-top-text {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    h2 {
+        margin: 10px 38px 0 0;
+    }
+
+    p {
+        margin: 5px 38px 38px 0;
+        color: #83F715;
+        font-size: 2.1rem;
+    }
+}
+    
+.right-bottom {
+    position: relative;
+    max-height: 264px;
+    bottom: -49px;
+}
+
+.right-bottom-img {
+    object-fit: cover;
+    width: 100%;
+}
+ 
+.right-bottom-description {
+    position: absolute;
+    bottom: 0;
+    padding: 0 25px;
+    display: flex;
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+.button {
+    cursor: pointer;
+}
+
+.watch-mask {
+    width: 100%;
+    height: 16px;
+    background-color: #4B7E5F;
 }
