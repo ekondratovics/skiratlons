@@ -1,40 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rubik:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rubik:wght@400;700&display=swap");
 
 html {
-    font-size: 62.5%;
-    margin: 0;
-    padding: 0;
+  font-size: 62.5%;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Fira Sans', sans-serif;
-    margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  background-color: #f7f8f3;
 }
 
 h1 {
-    font-size: 4.8rem;
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+  font-size: 4.8rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
 }
 
 h2 {
-    font-size: 3.6rem;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+  font-size: 3.6rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
 }
 
 p {
-    font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 
 li {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
+a {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+}
+
+@import "variables";
 @import "header";
 @import "intro";
 @import "watch";
+@import "stats";
+@import "tips";
+@import "warmup";

@@ -1,0 +1,76 @@
+.tips-container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 60px 200px 60px;
+}
+
+.tips {
+  max-width: 1320px;
+  color: $dark-green;
+
+  h1,
+  .tips-content,
+  .tips-bottom {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: right;
+    padding: 0 200px 75px 0;
+  }
+}
+
+.tips-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tips-left,
+.tips-right {
+  width: 460px;
+}
+
+.tips-1,
+.tips-2,
+.tips-3,
+.tips-4 {
+  position: relative;
+  height: 300px;
+
+  img {
+    position: absolute;
+    top: 10px;
+  }
+
+  .tips-text {
+    padding-left: 90px;
+
+    .top {
+      line-height: 3.2rem;
+      padding: 10px 0;
+    }
+
+    .bottom {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      color: #8f8f8f;
+    }
+  }
+}
+
+.tips-bottom {
+  position: relative;
+}
+
+.tips-bottom-content {
+  line-height: 3.5rem;
+  padding-left: 90px;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

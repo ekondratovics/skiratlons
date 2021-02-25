@@ -1,41 +1,41 @@
 .intro-container {
-    margin: 0 auto 143px auto;
-    max-width: 1440px;
-    height: 500px;
-    padding: 0 60px;
+  margin: 0 auto 143px auto;
+  max-width: 1440px;
+  height: 500px;
+  padding: 0 60px;
 }
 
 .intro {
-    background: url(/resources/Images/header-glass.png);
-    background-position: center;
-    color: #fff;
-    max-width: 1320px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background: url(/resources/Images/header-glass.png);
+  background-position: center;
+  color: #fff;
+  max-width: 1320px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-    
+
 .intro-banner {
-    height: 274px;
-    width: auto;
-    padding-left: 102px;
+  height: 274px;
+  width: auto;
+  padding-left: 102px;
 }
-    
+
 .intro-text {
-    width: 750px;
-    text-align: right;
-    padding-right: 10%;
+  width: 750px;
+  text-align: right;
+  padding-right: 10%;
 }
 
 .long-lines-container {
-    position: relative;
+  position: relative;
 
-    img {
-        width: 116px;
-        height: auto;
-        position: absolute;
-        left: 162px;
-    }
+  img {
+    width: 116px;
+    height: auto;
+    position: absolute;
+    left: 162px;
+  }
 }
