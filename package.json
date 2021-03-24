@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "live-server"
+    "serve": "live-server public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "laravel-mix": "^6.0.11",
+    "live-server": "^1.2.1",
     "postcss": "^8.1.14",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.32.6",
