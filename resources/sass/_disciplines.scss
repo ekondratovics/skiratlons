@@ -126,7 +126,7 @@
 	}
 
 	li::before {
-		content: url(/resources/Images/plus-ic-copy.png);
+		content: url(/images/plus-ic-copy.png);
 		position: absolute;
 		left: 0;
 	}
@@ -154,7 +154,7 @@
 		display: none;
 
 		li::before {
-			content: url(/resources/Images/minus-ic.png);
+			content: url(/images/minus-ic.png);
 			position: absolute;
 			top: -5px;
 			left: 0;
