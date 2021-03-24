@@ -232,14 +232,19 @@ function closeWatchModal() {
 }
 
 function addEventListenersWatch() {
-  for (let i=0; i<playButtonsLeft.length; i++) {
-    playButtonsLeft[i].addEventListener("click", function() {
-      openWatchModalLeft(i);
+
+  playButtonsLeft.forEach(function (button, index){
+    button.addEventListener("click", function() {
+      openWatchModalLeft(index);
     });
-    playButtonsRight[i].addEventListener("click", function() {
-      openWatchModalRight(i);
+  })
+
+  playButtonsRight.forEach(function (button, index){
+    button.addEventListener("click", function() {
+      openWatchModalLeft(index);
     });
-  }
+  })
+
 }
 
 addEventListenersWatch();
