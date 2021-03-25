@@ -241,7 +241,7 @@ function addEventListenersWatch() {
 
   playButtonsRight.forEach(function (button, index){
     button.addEventListener("click", function() {
-      openWatchModalLeft(index);
+      openWatchModalRight(index);
     });
   })
 
