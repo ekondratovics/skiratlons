@@ -203,11 +203,13 @@ launchCarousel();
 
 let playButtonsLeft = document.querySelectorAll(".watch-video-button.left"),
   playButtonsRight = document.querySelectorAll(".watch-video-button.right"),
+  playButtonsMobile = document.querySelectorAll(".watch-video-button.mobile"),
   hideWatch = document.querySelector(".watch-modal-close"),
   watchModal = document.querySelector(".watch-modal"),
   watchBody = document.querySelector("body"),
   videosLeft = document.querySelectorAll(".watch-video-left"),
-  videosRight = document.querySelectorAll(".watch-video-right");
+  videosRight = document.querySelectorAll(".watch-video-right"),
+  videosMobile = document.querySelectorAll(".watch-video iframe");
 
 function openWatchModalLeft(videoIndex) {
   videosLeft[videoIndex].classList.add("active");
@@ -221,30 +223,41 @@ function openWatchModalRight(videoIndex) {
   watchBody.classList.add("open");
 }
 
+function openWatchModalMobile(videoIndex) {
+  videosMobile[videoIndex].classList.add("active");
+  watchModal.classList.add("open");
+  watchBody.classList.add("open");
+}
+
 function closeWatchModal() {
-  console.log("close test");
   watchModal.classList.remove("open");
   watchBody.classList.remove("open");
   for (let i=0; i<playButtonsLeft.length; i++) {
     videosLeft[i].className = "watch-video-left";
     videosRight[i].className = "watch-video-right";
-  }
+  };
 }
 
 function addEventListenersWatch() {
-
-  playButtonsLeft.forEach(function (button, index){
-    button.addEventListener("click", function() {
-      openWatchModalLeft(index);
+  if(mediaQueryCarousel.matches) {
+    playButtonsLeft.forEach(function (button, index){
+      button.addEventListener("click", function() {
+        openWatchModalLeft(index);
+      });
     });
-  })
-
-  playButtonsRight.forEach(function (button, index){
-    button.addEventListener("click", function() {
-      openWatchModalRight(index);
+  
+    playButtonsRight.forEach(function (button, index){
+      button.addEventListener("click", function() {
+        openWatchModalRight(index);
+      });
     });
-  })
-
+  } else {
+    playButtonsMobile.forEach(function (button, index) {
+      button.addEventListener("click", function() {
+        openWatchModalMobile(index);
+      });
+    });
+  }
 }
 
 addEventListenersWatch();
