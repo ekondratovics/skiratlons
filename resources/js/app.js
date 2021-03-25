@@ -260,7 +260,7 @@ function addEventListenersWatch() {
   }
 }
 
-addEventListenersWatch();
+mediaQueryCarousel.addListener(addEventListenersWatch);
 
 hideWatch.addEventListener("click", closeWatchModal);
 watchModal.addEventListener("click", closeWatchModal);
