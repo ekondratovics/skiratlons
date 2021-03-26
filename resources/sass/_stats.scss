@@ -282,7 +282,7 @@ body.open {
 
 .stats-modal-content {
   display: inline-block;
-  width: auto;
+  max-width: 860px;
   position: relative;
 }
 
@@ -314,7 +314,7 @@ body.open {
 
 
 .modal-img {
-  margin: 75px auto 0 auto;
+  margin-top: 75px;
 }
 
 .modal-img.full {
