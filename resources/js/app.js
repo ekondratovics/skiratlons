@@ -18,10 +18,12 @@ menuIcon.addEventListener("click", function() {
 });
 
 function menuSetInitialClasses() {
-  menuIcon.className = "menu-icon";
+  if(menuBody.className === "menu-open") {
+    menuIcon.className = "menu-icon";
     shortLines.className = "short-lines";
     menuBody.className = "";
     navContainer.className = "nav-container";
+  }
 }
 
 navElements.forEach(function(item) {
