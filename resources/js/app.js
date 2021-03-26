@@ -13,7 +13,7 @@ let menuIcon = document.querySelector(".menu-icon"),
 menuIcon.addEventListener("click", function() {
   menuIcon.classList.toggle("menu-open");
   shortLines.classList.toggle("menu-open");
-  menuBody.classList.toggle("open");
+  menuBody.classList.toggle("menu-open");
   navContainer.classList.toggle("menu-open");
 });
 
