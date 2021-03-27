@@ -45,6 +45,7 @@
     font-size: 1.8rem;
 		text-align: center;
     text-transform: uppercase;
+		transition: all 0.3s linear;
   }
 }
 
@@ -55,10 +56,9 @@
 		color: #fff;
 	}
 
-	.tabs-button-imgs {
-		svg {
-			fill: $grass;
-		}
+	.tabs-button-imgs svg g g {
+		stroke: $grass;
+		transition: all 0.3s linear;
 	}
 }
 

@@ -241,6 +241,7 @@ function closeWatchModal() {
 }
 
 function addEventListenersWatch() {
+
   if(mediaQueryCarousel.matches) {
     playButtonsLeft.forEach(function (button, index){
       button.addEventListener("click", function() {
