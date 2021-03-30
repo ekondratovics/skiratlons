@@ -209,24 +209,43 @@ let playButtonsLeft = document.querySelectorAll(".watch-video-button.left"),
   hideWatch = document.querySelector(".watch-modal-close"),
   watchModal = document.querySelector(".watch-modal"),
   watchBody = document.querySelector("body"),
-  videosLeft = document.querySelectorAll(".watch-video-left"),
-  videosRight = document.querySelectorAll(".watch-video-right"),
-  videosMobile = document.querySelectorAll(".watch-video iframe");
+  ytIframe = document.querySelector(".watch-video iframe");
 
 function openWatchModalLeft(videoIndex) {
-  videosLeft[videoIndex].classList.add("active");
+  let ytLinksLeft = [
+    "https://www.youtube.com/embed/s3vjgaN2Tb0",
+    "https://www.youtube.com/embed/quBIbafdSRQ",
+    "https://www.youtube.com/embed/cMoeVdXv93k"
+  ]
+
+  ytIframe.setAttribute("src", ytLinksLeft[videoIndex]);
   watchModal.classList.add("open");
   watchBody.classList.add("open");
 }
 
 function openWatchModalRight(videoIndex) {
-  videosRight[videoIndex].classList.add("active");
+  let ytLinksRight = [
+    "https://www.youtube.com/embed/Usllgw9G2tU",
+    "https://www.youtube.com/embed/Epvj_qma2VM",
+    "https://www.youtube.com/embed/zN23rMWLirs"
+  ]
+
+  ytIframe.setAttribute("src", ytLinksRight[videoIndex]);
   watchModal.classList.add("open");
   watchBody.classList.add("open");
 }
 
 function openWatchModalMobile(videoIndex) {
-  videosMobile[videoIndex].classList.add("active");
+  let ytLinksMobile = [
+    "https://www.youtube.com/embed/s3vjgaN2Tb0",
+    "https://www.youtube.com/embed/Usllgw9G2tU",
+    "https://www.youtube.com/embed/quBIbafdSRQ",
+    "https://www.youtube.com/embed/Epvj_qma2VM",
+    "https://www.youtube.com/embed/cMoeVdXv93k",
+    "https://www.youtube.com/embed/zN23rMWLirs"
+  ]
+
+  ytIframe.setAttribute("src", ytLinksMobile[videoIndex]);
   watchModal.classList.add("open");
   watchBody.classList.add("open");
 }
@@ -234,15 +253,13 @@ function openWatchModalMobile(videoIndex) {
 function closeWatchModal() {
   watchModal.classList.remove("open");
   watchBody.classList.remove("open");
-  for (let i=0; i<playButtonsLeft.length; i++) {
-    videosLeft[i].className = "watch-video-left";
-    videosRight[i].className = "watch-video-right";
-  };
+  ytIframe.setAttribute("src", "");
 }
 
 function addEventListenersWatch() {
 
   if(mediaQueryCarousel.matches) {
+
     playButtonsLeft.forEach(function (button, index){
       button.addEventListener("click", function() {
         openWatchModalLeft(index);

@@ -454,12 +454,8 @@
 }
 
 .watch-video iframe {
-  display: none;
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.watch-modal iframe.active {
-  display: block;
 }
