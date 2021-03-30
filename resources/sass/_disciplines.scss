@@ -22,7 +22,7 @@
   background: $khaki;
   height: 120px;
   width: 50%;
-	padding: 44px 20px;
+	padding: 44px 20px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,8 @@
 .open-map {
 	background: rgba(1, 87, 62, 0.7);
 	height: 190px;
-	margin: 0 auto;;
+	margin: 0 auto;
+	padding: 20px;
 	max-width: 1140px;
 	display: flex;
 	justify-content: center;
@@ -190,7 +191,6 @@
 		text-transform: uppercase;
 		padding-left: 20px;
 	}
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
