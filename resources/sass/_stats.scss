@@ -319,7 +319,7 @@ body.open {
 
 .modal-img.full {
   display: none;
-  max-width: 860px;
+  width: 100%;
   
   @media (min-width: 768px) {
     display: block;
@@ -328,7 +328,7 @@ body.open {
 
 .modal-img.mobile {
   display: none;
-  max-width: 420px;
+  width: 100%;
 
   @media (max-width: 767px) {
     display: block;
