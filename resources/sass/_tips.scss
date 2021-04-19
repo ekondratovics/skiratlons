@@ -114,10 +114,10 @@
                 font-size: 16px;
             }
         }
-    }
 
-    .tips-card:last-of-type {
-        padding-bottom: 50px;
+        &:last-of-type {
+            padding-bottom: 50px;
+        }
     }
 }
 
@@ -166,10 +166,10 @@
                 line-height: 25px;
             }
         }
-    }
 
-    .tips-card:last-of-type {
-        padding-bottom: 50px;
+        &:last-of-type {
+            padding-bottom: 50px;
+        }
     }
 
     .tips-bottom p {

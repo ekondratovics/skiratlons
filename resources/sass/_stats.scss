@@ -3,7 +3,6 @@
     max-width: 1440px;
     padding: 0 60px;
     overflow: hidden;
-
 }
 
 .stats {
@@ -315,22 +314,22 @@ body.open {
 
 .modal-img {
     margin-top: 75px;
-}
 
-.modal-img.full {
-    display: none;
-    width: 100%;
-    
-    @media (min-width: 768px) {
-        display: block;
+    &.full {
+        display: none;
+        width: 100%;
+        
+        @media (min-width: 768px) {
+            display: block;
+        }
     }
-}
 
-.modal-img.mobile {
-    display: none;
-    width: 100%;
-
-    @media (max-width: 767px) {
-        display: block;
+    &.mobile {
+        display: none;
+        width: 100%;
+    
+        @media (max-width: 767px) {
+            display: block;
+        }
     }
 }

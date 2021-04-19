@@ -46,40 +46,42 @@ header {
             left: 0;
             transform: rotate(0deg);
             transition: .25s ease-in-out;
-        }
 
-        span:nth-child(1) {
-            top: 0;
-        }
+            &:nth-child(1) {
+                top: 0;
+            }
 
-        span:nth-child(2), span:nth-child(3) {
-            top: 8px;
-        }
+            &:nth-child(2), &:nth-child(3) {
+                top: 8px;
+            }
 
-        span:nth-child(4) {
-            top: 16px;
+            &:nth-child(4) {
+                top: 16px;
+            }
         }
     }
 
     .menu-icon.menu-open {
-            span:nth-child(1) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
-        }
+        span {
+            &:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
 
-        span:nth-child(2) {
-            transform: rotate(45deg);
-        }
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
 
-        span:nth-child(3) {
-            transform: rotate(-45deg);
-        }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
 
-        span:nth-child(4) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
+            &:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
         }
     }
 }
@@ -90,17 +92,19 @@ header {
         padding: 0 15px;
     }
 
-    header a {
-        left: 0;
-        transform: translate(0, -50%);
-    }
+    header {
+        a {
+            left: 0;
+            transform: translate(0, -50%);
+        }
 
-    header .short-lines {
-        left: 77px;
-    }
+        .short-lines {
+            left: 77px;
+        }
 
-    header .menu-icon {
-        display: block;
+        .menu-icon {
+            display: block;
+        }
     }
 }
 
@@ -109,17 +113,19 @@ header {
         padding: 0 15px;
     }
 
-    header a {
-        left: 0;
-        transform: translate(0, -50%);
-    }
+    header {
+        a {
+            left: 0;
+            transform: translate(0, -50%);
+        }
 
-    header .short-lines {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+        .short-lines {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    header .menu-icon {
-        display: block;
+        .menu-icon {
+            display: block;
+        }
     }
 }

@@ -16,10 +16,10 @@ nav ul {
 
 	li {
 		padding-bottom: 16px;
-	}
 
-	li:first-of-type {
-		padding-top: 16px;
+        &:first-of-type {
+            padding-top: 16px;
+        }
 	}
 
 	.soc-media-icon {
@@ -70,12 +70,12 @@ nav ul {
 			bottom: -1px;
 			transform: translate(50%, 50%);
 			z-index: 1;
-		}
 
-		.nav-circle:hover + .nav-element {
-			background-color: $color-base-white;
-			opacity: 1;
-			z-index: 0;
+            &:hover + .nav-element {
+                background-color: $color-base-white;
+                opacity: 1;
+                z-index: 0;
+            }
 		}
 	}
 }
@@ -87,10 +87,10 @@ nav ul {
 		position: static;
 		width: 100vw;
 		height: 100vh;
-	}
 
-	.nav-container.menu-open {
-		display: block;
+        &.menu-open {
+            display: block;
+        }
 	}
 
 	.short-lines.menu-open {
@@ -105,10 +105,10 @@ nav ul {
 
 		li {
 			display: inline;
-		}
 
-		li:first-of-type {
-			padding: 0 0 0 15px;
+            &:first-of-type {
+                padding: 0 0 0 15px;
+            }
 		}
 	}
 
@@ -127,10 +127,10 @@ nav ul {
 				opacity: 1;
 				z-index: 0;
 			}
-		}
 
-		li:last-of-type {
-			height: 15vh;
+            &:last-of-type {
+                height: 15vh;
+            }
 		}
 	}
 }

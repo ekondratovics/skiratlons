@@ -130,12 +130,12 @@
 		line-height: 25px;
 		padding: 0 0 20px 24px;
 		list-style: none;
-	}
 
-	li::before {
-		content: url(/images/plus-ic-copy.png);
-		position: absolute;
-		left: 0;
+        &::before {
+            content: url(/images/plus-ic-copy.png);
+            position: absolute;
+            left: 0;
+        }
 	}
 
 	.tip {

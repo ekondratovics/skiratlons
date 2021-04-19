@@ -14,14 +14,14 @@ body {
     font-family: "Fira Sans", sans-serif;
     margin: 0;
     background-color: $color-base-white;
-}
 
-body.open {
-    overflow: hidden;
-}
+    &.open {
+        overflow: hidden;
+    }
 
-body.menu-open {
-    overflow: hidden;
+    &.menu-open {
+        overflow: hidden;
+    }
 }
 
 h1 {
