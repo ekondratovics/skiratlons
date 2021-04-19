@@ -2,11 +2,11 @@
 	width: 100%;
 
 	.top-container {
-		background: #f7f8f3;
+		background-color: $color-base-white;
 	}
 	
 	.bottom-container {
-		background: #749B70;
+		background-color: $color-pale-green;
 	}
 
 	.top, .bottom {
@@ -19,8 +19,8 @@
 		padding-bottom: 45px;
 
 		p {
-			color: #8f8f8f;
-			font-size: 1.6rem;
+			color: $color-light-grey;
+			font-size: 16px;
 		}
 	}
 
@@ -31,8 +31,8 @@
 		align-items: center;
 
 		h1 {
-			color: $dark-green;
-			font-size: 2.4rem;
+			color: $color-dark-green;
+			font-size: 24px;
 			padding-bottom: 10px;
 			text-transform: uppercase;
 		}
@@ -40,7 +40,7 @@
 		a {
 			color: #fff;
 			font-family: "Rubik", sans-serif;
-			font-size: 2rem;
+			font-size: 20px;
 			padding-right: 20px;
 			text-decoration: none;
 		}
@@ -53,14 +53,14 @@
 		align-items: initial;
 
 		.left h1 {
-			font-size: 1.8rem;
+			font-size: 18px;
 			line-height: 20px;
 			padding-bottom: 5px;
 		}
 
 		.contacts a {
 			display: block;
-			font-size: 1.6rem;
+			font-size: 16px;
 			line-height: 20px;
 		}
 	}

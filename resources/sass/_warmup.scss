@@ -1,92 +1,90 @@
 .warmup-container {
-  background:  #222 url(/images/tin-can.png) no-repeat center;
-  background-size: cover;
-  margin: 70px auto 145px auto;
-  max-width: 1320px;
-  height: auto;
+    background:  #222 url(/images/tin-can.png) no-repeat center;
+    background-size: cover;
+    margin: 70px auto 145px auto;
+    max-width: 1320px;
+    height: auto;
 }
 
 .warmup {
-  color: #F7F8F3;
-  max-width: 1140px;
-  height: 746px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+    color: $color-base-white;
+    max-width: 1140px;
+    height: 746px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .warmup-left {
-  max-width: 458px;
+    max-width: 458px;
 }
 
 .warmup-img {
-  position: relative;
-  top: -70px;
-  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -70px;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
 
-  img {
-    width: 100%;
-  }
+    img {
+        width: 100%;
+    }
 }
 
 .warmup-img-text {
-  background: linear-gradient(
-    180deg,
-    rgba(34, 34, 34, 0) 0%,
-    rgba(34, 34, 34, 0.9) 100%
-  );
-  height: 230px;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
+    background-image: linear-gradient(
+        180deg,
+        rgba(34, 34, 34, 0) 0%,
+        rgba(34, 34, 34, 0.9) 100%
+    );
+    height: 230px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
 
-  h2 {
-    padding: 0 50px 32px 50px;
-    line-height: 48px;
-    margin-top: auto;
-  }
+    h2 {
+        padding: 0 50px 32px 50px;
+        line-height: 48px;
+        margin-top: auto;
+    }
 }
 
 .warmup-right {
-  padding: 121px 0 0 0;
-  width: 610px;
+    padding: 121px 0 0 0;
+    width: 610px;
 
-  h1 {
-    padding: 0 0 25px 60px;
-  }
+    h1 {
+        padding: 0 0 25px 60px;
+    }
 }
 
-.warmup-1,
-.warmup-2,
-.warmup-3 {
-  display: flex;
-	padding-bottom: 45px;
+.warmup-card {
+    display: flex;
+    padding-bottom: 45px;
 
-  h1 {
-    color: $grass;
-    padding: 0 30px 0 0;
-  }
+    h1 {
+        color: $color-grass;
+        padding: 0 30px 0 0;
+    }
 
-  h2 {
-    font-family: "Fira Sans";
-    font-size: 2.4rem;
-    line-height: 32px;
-		padding-bottom: 6px;
-  }
+    h2 {
+        font-family: "Fira Sans";
+        font-size: 24px;
+        line-height: 32px;
+        padding-bottom: 6px;
+    }
 
-	p {
-		color: $khaki;
-  	font-size: 1.6rem;
-  	line-height: 25px;
-	}
+    p {
+        color: $color-khaki;
+        font-size: 16px;
+        line-height: 25px;
+    }
 
-	a {
-		color: $khaki;
-	}
+    a {
+        color: $color-khaki;
+    }
 }
 
-.warmup-2-text {
+.warmup-card-text .two {
 	p {
 		padding-bottom: 12px;
 	}
@@ -97,173 +95,169 @@
 }
 
 .warmup-mask {
+    background-color: $color-pale-green;
 	height: 96px;
-  width: 100%;
-  background-color: #749B70;
+    width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-  img {
-    vertical-align: middle;
-  }
+    img {
+        vertical-align: middle;
+    }
 
-	a {
-		color: #fff;
-		padding-left: 10px;
-		text-transform: uppercase;
-    vertical-align: middle;
-	}
+    a {
+        color: #fff;
+        padding-left: 10px;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
 }
 
 .warmup-mask-left {
-  padding-right: 65px;
+    padding-right: 65px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .warmup-container {
-    margin: 45px auto 60px auto;
-  }
-  
-  .warmup {
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .warmup-left {
-    float: right;
-    max-width: auto;
-    padding-left: 80px;
-  }
-  
-  .warmup-img {
-    width: 282px;
-    position: relative;
-    right: 40px;
-    top: -45px;
-  
-    img {
-      width: 100%;
-    }
-  }
-  
-  .warmup-img-text h2 {
-      font-size: 2rem;
-      line-height: 28px;
-      padding: 0 30px 30px 30px;
-  }
-  
-  .warmup-right {
-    padding: 80px 40px 35px 40px;
-    width: 100%;
-  
-    h1 {
-      font-size: 4.8rem;
-      line-height: 57px;
-      padding: 0 0 25px 60px;
-    }
-  }
-  
-  .warmup-1,
-  .warmup-2,
-  .warmup-3 {
-    display: flex;
-    padding-bottom: 45px;
-  
-    h1 {
-      font-size: 3.6rem;
-      line-height: 36px;
-      padding: 0 30px 0 0;
-    }
-  }
-  
-  .warmup-2-text {
-    p {
-      padding-bottom: 12px;
+    .warmup-container {
+        margin: 45px auto 60px auto;
     }
     
-    a {
-      text-transform: uppercase;
+    .warmup {
+        height: auto;
+        margin: 0 auto;
+        display: block;
     }
-  }
+    
+    .warmup-left {
+        float: right;
+        max-width: auto;
+        padding-left: 80px;
+    }
+    
+    .warmup-img {
+        width: 282px;
+        position: relative;
+        right: 40px;
+        top: -45px;
+    
+        img {
+            width: 100%;
+        }
+    }
+    
+    .warmup-img-text h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0 30px 30px 30px;
+    }
+    
+    .warmup-right {
+        padding: 80px 40px 35px 40px;
+        width: 100%;
+    
+        h1 {
+            font-size: 48px;
+            line-height: 57px;
+            padding: 0 0 25px 60px;
+        }
+    }
+    
+    .warmup-card {
+        display: flex;
+        padding-bottom: 45px;
+    
+        h1 {
+            font-size: 36px;
+            line-height: 36px;
+            padding: 0 30px 0 0;
+        }
+    }
+    
+    .warmup-card-text .two {
+        p {
+            padding-bottom: 12px;
+        }
+        
+        a {
+            text-transform: uppercase;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-  .warmup-container {
-    margin: 70px auto 15px auto;
-  }
-  
-  .warmup {
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .warmup-left {
-    max-width: none;
-    padding: 0 15px;
-    width: 100%;
-  }
-  
-  .warmup-img {
-    max-width: 290px;
-    position: relative;
-    top: -70px;
-    margin: 0 auto;
-  }
-  
-  .warmup-img-text h2 {
-      font-size: 2rem;
-      line-height: 28px;
-      padding: 0 30px 30px 30px;
-  }
-  
-  .warmup-right {
-    padding: 0 15px 35px 15px;
-    width: 100%;
-  
-    h1 {
-      padding: 0 0 30px 0;
+    .warmup-container {
+        margin: 70px auto 15px auto;
     }
-  }
-  
-  .warmup-1,
-  .warmup-2,
-  .warmup-3 {
-    display: flex;
-    padding-bottom: 30px;
-  
-    h1 {
-      font-size: 2.4rem;
-      line-height: 28px;
-      padding: 0 15px 0 0;
+    
+    .warmup {
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .warmup-left {
+        max-width: none;
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    .warmup-img {
+        max-width: 290px;
+        position: relative;
+        top: -70px;
+        margin: 0 auto;
+    }
+    
+    .warmup-img-text h2 {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0 30px 30px 30px;
+    }
+    
+    .warmup-right {
+        padding: 0 15px 35px 15px;
+        width: 100%;
+    
+        h1 {
+            padding: 0 0 30px 0;
+        }
+    }
+    
+    .warmup-card {
+        display: flex;
+        padding-bottom: 30px;
+    
+        h1 {
+            font-size: 24px;
+            line-height: 28px;
+            padding: 0 15px 0 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
 
-    h2 {
-      font-size: 2rem;
-      line-height: 32px;
+    .warmup-mask {
+        background-color: $color-pale-green;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
     }
-  }
 
-  .warmup-mask {
-    height: auto;
-    width: 100%;
-    background-color: #749B70;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-  }
+    .warmup-mask-left,
+    .warmup-mask-right {
+        display: flex;
+        align-items: flex-start;
+        padding: 35px 30px;
+    }
 
-  .warmup-mask-left,
-  .warmup-mask-right {
-    display: flex;
-    align-items: flex-start;
-    padding: 35px 30px;
-  }
-
-  .warmup-mask-right {
-    padding-top: 0;
-  }
+    .warmup-mask-right {
+        padding-top: 0;
+    }
 }

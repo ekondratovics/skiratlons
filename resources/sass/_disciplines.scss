@@ -1,96 +1,97 @@
 .disciplines-container {
-	margin-bottom: 120px;
+    margin-bottom: 120px;
 }
 
 .disciplines-container-tabs,
 .disciplines-container-content {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 15px;
 }
 
 .disciplines-tabs,
 .disciplines-content {
-  color: #fff;
-  background: $dark-green;
-  max-width: 1140px;
-  margin: 0 auto;
-  display: flex;
+    color: #fff;
+    background-color: $color-dark-green;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .tabs-button {
-  background: $khaki;
-  height: 120px;
-  width: 50%;
-	padding: 44px 20px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-	transition: all 0.3s linear;
+    background-color: $color-khaki;
+    height: 120px;
+    width: 50%;
+    padding: 44px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
 
-	.tabs-button-imgs {
+   	.tabs-button-imgs {
 		display: flex;
 		justify-content: center;
 		margin-right: 20px;
 
-		svg {
+	  	svg {
 			width: 36px;
 			margin-left: 5px;
-		}
-	}
+      	}
+  	}
 
-  h1 {
-    color: $dark-green;
-    font-size: 1.8rem;
+	h1 {
+		color: $color-dark-green;
+		font-size: 18px;
 		text-align: center;
-    text-transform: uppercase;
+		text-transform: uppercase;
 		transition: all 0.3s linear;
-  }
+	}
 }
 
 .tabs-button.active {
-	background: $dark-green;
+	background-color: $color-dark-green;
 
 	h1 {
 		color: #fff;
 	}
 
-	.tabs-button-imgs svg g g {
-		stroke: $grass;
+	.tabs-button-imgs svg g {
+		stroke: $color-grass;
 		transition: all 0.3s linear;
 	}
 }
 
 .disciplines-content {
-  flex-direction: column;
+  	flex-direction: column;
 }
 
 .disciplines-buffer {
-  background: $dark-green;
-  height: 60px;
-  width: 100%;
+	background-color: $color-dark-green;
+	height: 60px;
+	width: 100%;
 }
 
 .disciplines {
-	display: none;
+  	display: none;
 }
 
-.disciplines.two.active, .disciplines.three.active {
-	display: grid;
+.disciplines.two.active,
+.disciplines.three.active {
+  	display: grid;
 }
 
 .disciplines.two {
-  grid-template-columns: 1fr 1fr;
+  	grid-template-columns: 1fr 1fr;
 }
 
 .disciplines.three {
-  grid-template-columns: 1fr 1fr 1fr;
+  	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .discipline {
-  color: #f7f8f3;
-	border-right: 1px solid #4b7e5f;
+	color: $color-base-white;
+	border-right: 1px solid $color-forest-green;
 	padding: 0 60px;
 
 	.discipline-img {
@@ -100,21 +101,21 @@
 
 	.heading {
 		display: flex;
-    justify-content: space-between;
-    align-items: center;
+		justify-content: space-between;
+		align-items: center;
 		padding-bottom: 28px;
 	}
 
-  h2 {
-    font-family: "Fira Sans", sans-serif;
-    font-size: 2.4rem;
+	h2 {
+		font-family: "Fira Sans", sans-serif;
+		font-size: 24px;
 		line-height: 32px;
 		padding-left: 24px;
-  }
+	}
 
 	p {
-		color: $grass;
-		font-size: 1.6rem;
+		color: $color-grass;
+		font-size: 16px;
 		line-height: 32px;
 		padding: 0 0 8px 24px;
 	}
@@ -125,7 +126,7 @@
 
 	li {
 		position: relative;
-		font-size: 1.6rem;
+		font-size: 16px;
 		line-height: 25px;
 		padding: 0 0 20px 24px;
 		list-style: none;
@@ -141,13 +142,13 @@
 		padding-bottom: 32px;
 
 		img {
-			padding-left: 24px;
+		padding-left: 24px;
 		}
 
 		P {
-			color: $khaki;
-			line-height: 25px;
-			padding-top: 12px;
+		color: $color-khaki;
+		line-height: 25px;
+		padding-top: 12px;
 		}
 	}
 
@@ -160,24 +161,24 @@
 		display: none;
 
 		li::before {
-			content: url(/images/minus-ic.png);
-			position: absolute;
-			top: -5px;
-			left: 0;
+		content: url(/images/minus-ic.png);
+		position: absolute;
+		top: -5px;
+		left: 0;
 		}
 	}
 }
 
 .minus.open {
-	display: block;
+  	display: block;
 }
 
 .discipline:last-of-type {
-	border-right: none;
+  	border-right: none;
 }
 
 .open-map {
-	background: rgba(1, 87, 62, 0.7);
+	background-color: rgba(1, 87, 62, 0.7);
 	height: 190px;
 	margin: 0 auto;
 	padding: 20px;
@@ -197,7 +198,7 @@
 	.disciplines-container {
 		margin-bottom: 60px;
 	}
-	
+
 	.disciplines-container-content {
 		padding: 0;
 	}
@@ -244,9 +245,9 @@
 				width: 27px;
 			}
 		}
-		
+
 		h1 {
-			font-size: 1.6rem;
+			font-size: 16px;
 			line-height: 19px;
 		}
 	}

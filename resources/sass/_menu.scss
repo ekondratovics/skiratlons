@@ -1,8 +1,8 @@
 .nav-container {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
 }
 
 nav ul {
@@ -34,17 +34,17 @@ nav ul {
 }
 
 .nav-bar {
-  border-right: 2px solid #749b70;
-  margin-right: 30px;
-	width: 200px;
+    border-right: 2px solid $color-pale-green;
+    margin-right: 30px;
+    width: 200px;
 
 	li {
 		height: 10vh;
 		position: relative;
 
 		.nav-element {
-			color: #749B70;
-			font-size: 1.4rem;
+			color: $color-pale-green;
+			font-size: 14px;
 			line-height: 17px;
 			padding: 14px;
 			border-radius: 28px 0 0 28px;
@@ -60,9 +60,9 @@ nav ul {
 		}
 
 		.nav-circle {
-			border: 2px solid #749b70;
+			border: 2px solid $color-pale-green;
 			border-radius: 50%;
-			background-color: #f7f8f3;
+			background-color: $color-base-white;
 			height: 14px;
 			width: 14px;
 			position: absolute;
@@ -73,7 +73,7 @@ nav ul {
 		}
 
 		.nav-circle:hover + .nav-element {
-			background-color: #f7f8f3;
+			background-color: $color-base-white;
 			opacity: 1;
 			z-index: 0;
 		}
@@ -82,11 +82,11 @@ nav ul {
 
 @media (max-width: 1024px) {
 	.nav-container {
+        background-color: $color-base-white;
 		display: none;
 		position: static;
 		width: 100vw;
 		height: 100vh;
-		background-color: #f7f8f3;
 	}
 
 	.nav-container.menu-open {
@@ -121,8 +121,8 @@ nav ul {
 			height: 5vh;
 	
 			.nav-element {
-				color: #749B70;
-				font-size: 2rem;
+				color: $color-pale-green;
+				font-size: 20px;
 				line-height: 24px;
 				opacity: 1;
 				z-index: 0;

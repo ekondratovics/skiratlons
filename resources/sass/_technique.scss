@@ -1,216 +1,200 @@
 .technique-container {
-  margin: 0 auto 160px auto;
-  max-width: 1440px;
-  padding: 0 60px;
+    margin: 0 auto 160px auto;
+    max-width: 1440px;
+    padding: 0 60px;
 }
 
 .technique {
-  margin: 0 auto;
-  max-width: 1320px;
+    margin: 0 auto;
+    max-width: 1320px;
 }
 
 .technique-content {
-  margin: 0 auto;
-  max-width: 1140px;
-  display: flex;
-  justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .technique-left {
-  width: 536px;
+    width: 536px;
 
-  h1 {
-    color: $dark-green;
-    padding: 0 0 25px 60px;
-  }
+    h1 {
+        color: $color-dark-green;
+        padding: 0 0 25px 60px;
+    }
 }
 
-.technique-1,
-.technique-2,
-.technique-3 {
-  display: flex;
-  padding-bottom: 45px;
-  width: 536px;
+.technique-card {
+    display: flex;
+    padding-bottom: 45px;
+    width: 536px;
 
-  h1 {
-    color: $grass;
-    padding: 0 30px 0 0;
-  }
+    h1 {
+        color: $color-grass;
+        padding: 0 30px 0 0;
+    }
 
-  h2 {
-    color: $dark-green;
-    font-family: "Fira Sans";
-    font-size: 2.4rem;
-    line-height: 32px;
-    padding-bottom: 6px;
-  }
+    h2 {
+        color: $color-dark-green;
+        font-family: "Fira Sans";
+        font-size: 24px;
+        line-height: 32px;
+        padding-bottom: 6px;
+    }
 
-  p {
-    color: #8f8f8f;
-    font-size: 16px;
-    line-height: 25px;
-  }
+    p {
+        color: $color-light-grey;
+        font-size: 16px;
+        line-height: 25px;
+    }
 
-  a {
-    color: $khaki;
-  }
+    a {
+        color: $color-khaki;
+    }
 }
 
 .technique-right {
-  max-width: 458px;
+    max-width: 458px;
 }
 
 .technique-img {
-  position: relative;
-  width: 100%;
-  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
-
-  img {
+    position: relative;
     width: 100%;
-  }
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 100%;
+    }
 }
 
 .technique-img-text {
-  color: #f7f8f3;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 34, 34, 0) 0%,
-    rgba(34, 34, 34, 0.9) 100%
-  );
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
+    color: $color-base-white;
+    background-image: linear-gradient(
+        180deg,
+        rgba(34, 34, 34, 0) 0%,
+        rgba(34, 34, 34, 0.9) 100%
+    );
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
 
-  h2 {
-    padding: 0 50px 32px 50px;
-    line-height: 48px;
-  }
+    h2 {
+        padding: 0 50px 32px 50px;
+        line-height: 48px;
+    }
 }
-
-
-
-
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .technique-container {
-    margin: 0 auto 75px auto;
-    max-width: 1440px;
-    padding: 0 40px;
-  }
-
-  .technique-content {
-    flex-direction: row-reverse;
-  }
-
-  .technique-right {
-    width: auto;
-  }
-
-  .technique-img {
-    position: relative;
-    width: auto;
-  
-    img {
-      width: 282px;
+    .technique-container {
+        margin: 0 auto 75px auto;
+        max-width: 1440px;
+        padding: 0 40px;
     }
-  }
-  
-  .technique-img-text {
-    height: 40%;
 
-    h2 {
-      padding: 0 30px 25px;
-      font-size: 2rem;
-      line-height: 28px;
+    .technique-content {
+        flex-direction: row-reverse;
     }
-  }
 
-  .technique-left {
-    width: auto;
-    padding: 20px 0 0 45px;
-  
-    h1 {
-      font-size: 4.8rem;
-      line-height: 57px;
-      padding: 0 0 25px 60px;
+    .technique-right {
+        width: auto;
     }
-  }
-  
-  .technique-1,
-  .technique-2,
-  .technique-3 {
-    display: flex;
-    padding-bottom: 45px;
-    width: 100%;
-  
-    h1 {
-      font-size: 3.6rem;
-      line-height: 43px;
-      padding: 0 30px 0 0;
+
+    .technique-img {
+        position: relative;
+        width: auto;
+    
+        img {
+            width: 282px;
+        }
     }
-  }
+    
+    .technique-img-text {
+        height: 40%;
+
+        h2 {
+            padding: 0 30px 25px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    .technique-left {
+        width: auto;
+        padding: 20px 0 0 45px;
+    
+        h1 {
+            font-size: 48px;
+            line-height: 57px;
+            padding: 0 0 25px 60px;
+        }
+    }
+    
+    .technique-card {
+        display: flex;
+        padding-bottom: 45px;
+        width: 100%;
+    
+        h1 {
+            font-size: 36px;
+            line-height: 43px;
+            padding: 0 30px 0 0;
+        }
+    }
 }
 
-
-
-
-
-
 @media (max-width: 767px) {
-  .technique-container {
-    margin: 0 auto 15px auto;
-    padding: 0 15px;
-  }
-
-  .technique-content {
-    flex-direction: column-reverse;
-  }
-
-  .technique-right {
-    max-width: 290px;
-    margin: 0 auto;
-
-  }
-
-  .technique-img {
-    max-width: 290px;
-  
-    img {
-      max-width: 290px;
+    .technique-container {
+        margin: 0 auto 15px auto;
+        padding: 0 15px;
     }
-  }
-  
-  .technique-img-text {
-    height: 40%;
-    max-width: 290px;
 
-    h2 {
-      padding: 0 30px 30px;
-      font-size: 2rem;
-      line-height: 28px;
+    .technique-content {
+        flex-direction: column-reverse;
     }
-  }
 
-  .technique-left {
-    width: 100%;
-    padding: 0;
+    .technique-right {
+        max-width: 290px;
+        margin: 0 auto;
 
-    h1 {
-      padding: 50px 0 20px 27px;
     }
-  }
-  
-  .technique-1,
-  .technique-2,
-  .technique-3 {
-    width: 100%;
-  
-    h1 {
-      padding: 0 15px 0 0;
+
+    .technique-img {
+        max-width: 290px;
+    
+        img {
+            max-width: 290px;
+        }
     }
-  }
+    
+    .technique-img-text {
+        height: 40%;
+        max-width: 290px;
+
+        h2 {
+            padding: 0 30px 30px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    .technique-left {
+        width: 100%;
+        padding: 0;
+
+        h1 {
+            padding: 50px 0 20px 27px;
+        }
+    }
+    
+    .technique-card {
+        width: 100%;
+    
+        h1 {
+            padding: 0 15px 0 0;
+        }
+    }
 }
