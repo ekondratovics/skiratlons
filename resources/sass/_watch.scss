@@ -2,6 +2,10 @@
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 60px;
+
+    @include breakpoint(desktop, max) {
+        padding: 0 15px;
+    }
 }
 
 .watch {
@@ -21,29 +25,94 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            display: block;
+            height: 90%;
+            max-width: 811px;
+            margin: 0 75px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        flex-direction: column-reverse;
+        margin: 0 15px;
+    }
 }
 
 .watch-left {
     width: 555px;
     margin-left: 15px;
     position: relative;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            width: auto;
+            height: 100%;
+            margin-left: 0;
+            position: static;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        width: auto;
+        height: 100%;
+        margin-left: 0;
+        position: static;
+    }
 }
 
 .left-top {
     padding: 139px 0 100px 100px;
 
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            width: 60%;
+            padding: 83px 0 50px 0;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0;
+    }
+
     h1 {
         margin: 0;
+
+        @include breakpoint(tablet, max) {
+            padding-bottom: 9px;
+        }
     }
 
     p {
         font-size: 21px;
         line-height: 35px;
+
+        @include breakpoint(tablet, max) {
+            font-size: 16px;
+            line-height: 25px;
+        }
     }
 }
 
 .left-bottom {
     position: relative;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        margin: 20px auto 0 auto;
+        max-width: 555px;
+    }
 }
 
 .left-bottom-item {
@@ -53,6 +122,11 @@
     height: 336px;
     width: 555px;
     transition: opacity .5s, position .5s, z-index .5s;
+
+    @include breakpoint(desktop, max) {
+        height: 100%;
+        width: 100%;
+    }
 
     &.active {
         opacity: 1;
@@ -73,6 +147,13 @@
     display: flex;
     align-items: center;
 
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
     h2 {
         font-size: 24px;
     }
@@ -83,16 +164,35 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+
+    @include breakpoint(tablet, max) {
+        margin: 0 auto;
+        max-width: 555px;
+    }
 }
 
 .dots {
     display: flex;
     justify-content: space-between;
     width: 80px;
+
+    @include breakpoint(desktop, max) {
+        display: none;
+    }
 }
 
 .dots-six {
     display: none;
+
+    @include breakpoint(desktop, max) {
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0 5px;
+    }
 }
 
 .dot-button {
@@ -110,6 +210,22 @@
 .watch-right {
     max-width: 458px;
     margin: 0 15px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            height: 330px;
+            max-width: 242px;
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        max-width: none;
+        margin: 0;
+    }
 }
 
 .right-top {
@@ -120,12 +236,34 @@
     position: relative;
     top: -72px;
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            height: 330px;
+            width: 242px;
+            top: 0;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        max-width: 242px;
+        margin: 0 auto;
+        top: -40px;
+    }
 }
 
 .right-top-img {
     object-fit: cover;
     width: 100%;
     position: relative;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            object-fit: stretch;
+            height: 330px;
+            width: 242px;
+        }
+    }
 }
 
 .right-top-text {
@@ -139,20 +277,53 @@
     bottom: 0;
     width: 100%;
 
+    @include breakpoint(tablet, max) {
+        padding: 0 18px 10px;
+    }
+
     h2 {
         margin: 10px 38px 0 0;
         color: $color-base-white;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                line-height: 28px;
+                margin-right: 21px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 24px;
+            margin: 0;
+        }
     }
 
     p {
         margin: 5px 38px 38px 0;
         color: $color-grass;
         font-size: 21px;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                font-size: 18px;
+                line-height: 35px;
+                margin: 0 21px 16px 0;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 18px;
+            margin: 0;
+        }
     }
 }
 
 .right-bottom {
      position: relative;
+
+    @include breakpoint(desktop, max) {
+        display: none;
+    }
 }
 
 .right-bottom-item {
@@ -194,6 +365,13 @@
     cursor: pointer;
 }
 
+.button-prev,
+.button-next {
+    @include breakpoint(tablet, max) {
+        width: 42px;
+    }
+}
+
 .watch-video-button {
     height: 48px;
     z-index: 2;
@@ -203,193 +381,6 @@
     width: 100%;
     height: 16px;
     background-color: $color-forest-green;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .watch-container {
-        padding: 0 15px;
-    }
-
-    .watch-content {
-        display: block;
-        height: 90%;
-        max-width: 811px;
-        margin: 0 75px;
-    }
-
-    .watch-left {
-        width: auto;
-        height: 100%;
-        margin-left: 0;
-        position: static;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .left-top {
-        width: 60%;
-        padding: 83px 0 50px 0;
-    }
-    
-    .left-bottom {
-        margin-top: 20px;
-        width: 100%;
-    }
-    
-    .left-bottom-item {
-        height: 100%;
-        width: 100%;
-    }
-    
-    .left-bottom-description {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .dots {
-        display: none;
-    }
-
-    .dots-six {
-        display: flex;
-        justify-content: space-between;
-        width: 160px;
-    }
-
-    .watch-right {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        height: 330px;
-        max-width: 242px;
-        margin: 0;
-    }
-
-    .right-top {
-        height: 330px;
-        width: 242px;
-        top: 0;
-
-        h2 {
-            line-height: 28px;
-            margin-right: 21px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 35px;
-            margin: 0 21px 16px 0;
-        }
-    }
-
-    .right-top-img {
-        object-fit: stretch;
-        height: 330px;
-        width: 242px;
-    }
-
-    .right-bottom {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .watch-container {
-        padding: 0 15px;
-    }
-
-    .watch {
-        height: auto;
-    }
-
-    .watch-content {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 0 15px;
-    }
-
-    .watch-left {
-        width: auto;
-        height: 100%;
-        margin-left: 0;
-        position: static;
-    }
-    
-    .left-top {
-        padding: 0;
-        
-        h1 {
-            padding-bottom: 9px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 25px;
-        }
-    }
-    
-    .left-bottom {
-        margin: 20px auto 0 auto;
-        max-width: 555px;
-    }
-    
-    .left-bottom-item {
-        height: 100%;
-        width: 100%;
-    }
-    
-    .control-bar {
-        margin: 0 auto;
-        max-width: 555px;
-    }
-
-    .dots {
-        display: none;
-    }
-
-    .dots-six {
-        display: flex;
-        justify-content: space-between;
-        min-width: 160px;
-        padding: 0 5px;
-    }
-
-    .button-prev,
-    .button-next {
-        width: 42px;
-    }
-
-    .watch-right {
-        max-width: none;
-        margin: 0;
-    }
-
-    .right-top {
-        max-width: 242px;
-        margin: 0 auto;
-        position: relative;
-        top: -40px;
-
-        .right-top-text {
-            padding: 0 18px 10px;
-        
-            h2 {
-                font-size: 24px;
-                margin: 0;
-            }
-        
-            p {
-                font-size: 18px;
-                margin: 0;
-            }
-        }
-    }
-
-    .right-bottom {
-        display: none;
-    }
 }
 
 //////////////////////

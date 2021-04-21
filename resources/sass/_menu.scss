@@ -3,6 +3,24 @@
     right: 0;
     top: 0;
     z-index: 2;
+
+    @include breakpoint(desktop, max) {
+        background-color: $color-base-white;
+		display: none;
+		position: static;
+		width: 100vw;
+		height: 100vh;
+
+        &.menu-open {
+            display: block;
+        }
+    }
+}
+
+.short-lines.menu-open {
+    @include breakpoint(desktop, max) {
+        display: none;
+    }
 }
 
 nav ul {
@@ -14,11 +32,26 @@ nav ul {
 	position: relative;
 	left: 93px;
 
+    @include breakpoint(desktop, max) {
+        position: absolute;
+		left: 0;
+		top: 50%;
+		z-index: 1;
+    }
+
 	li {
 		padding-bottom: 16px;
 
+        @include breakpoint(desktop, max) {
+            display: inline;
+        }
+
         &:first-of-type {
             padding-top: 16px;
+
+            @include breakpoint(desktop, max) {
+                padding: 0 0 0 15px;
+            }
         }
 	}
 
@@ -38,9 +71,23 @@ nav ul {
     margin-right: 30px;
     width: 200px;
 
+    @include breakpoint(desktop, max) {
+        position: absolute;
+		right: 0;
+		width: 300px;
+    }
+
 	li {
 		height: 10vh;
 		position: relative;
+
+        @include breakpoint(desktop, max) {
+            height: 5vh;
+
+            &:last-of-type {
+                height: 15vh;
+            }
+        }
 
 		.nav-element {
 			color: $color-pale-green;
@@ -57,6 +104,15 @@ nav ul {
 			transform: translateY(50%);
 			opacity: 0;
 			z-index: -100;
+
+            @include breakpoint(desktop, max) {
+                color: $color-pale-green;
+				font-size: 20px;
+				line-height: 24px;
+				opacity: 1;
+				z-index: 0;
+            }
+
 		}
 
 		.nav-circle {
@@ -75,61 +131,6 @@ nav ul {
                 background-color: $color-base-white;
                 opacity: 1;
                 z-index: 0;
-            }
-		}
-	}
-}
-
-@media (max-width: 1024px) {
-	.nav-container {
-        background-color: $color-base-white;
-		display: none;
-		position: static;
-		width: 100vw;
-		height: 100vh;
-
-        &.menu-open {
-            display: block;
-        }
-	}
-
-	.short-lines.menu-open {
-		display: none;
-	}
-
-	.soc-media {
-		position: absolute;
-		left: 0;
-		top: 50%;
-		z-index: 1;
-
-		li {
-			display: inline;
-
-            &:first-of-type {
-                padding: 0 0 0 15px;
-            }
-		}
-	}
-
-	.nav-bar {
-		position: absolute;
-		right: 0;
-		width: 300px;
-
-		li {
-			height: 5vh;
-	
-			.nav-element {
-				color: $color-pale-green;
-				font-size: 20px;
-				line-height: 24px;
-				opacity: 1;
-				z-index: 0;
-			}
-
-            &:last-of-type {
-                height: 15vh;
             }
 		}
 	}

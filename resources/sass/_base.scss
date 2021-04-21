@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: "Fira Sans", sans-serif;
+    font-family: $font-family-body;
     margin: 0;
     background-color: $color-base-white;
 
@@ -26,18 +26,49 @@ body {
 
 h1 {
     font-size: 48px;
-    font-family: "Rubik", sans-serif;
+    font-family: $font-family-heading;
     font-weight: bold;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            font-size: 36px;
+            line-height: 45px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }
 
 h2 {
     font-size: 36px;
-    font-family: "Rubik", sans-serif;
+    font-family: $font-family-heading;
     font-weight: 400;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            font-size: 24px;
+            line-height: 35px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        font-size: 18px;
+        line-height: 25px;
+    } 
 }
 
 p {
     font-size: 21px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            font-size: 21px;
+            line-height: 35px;
+        }
+    }
 }
 
 li {
@@ -45,35 +76,6 @@ li {
 }
 
 a {
-    font-family: "Rubik", sans-serif;
+    font-family: $font-family-heading;
     font-size: 16px;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    h1 {
-        font-size: 36px;
-        line-height: 45px;
-    }
-
-    h2 {
-        font-size: 24px;
-        line-height: 35px;
-    }
-
-    p {
-        font-size: 21px;
-        line-height: 35px;
-    }
-}
-
-@media (max-width: 767px) {
-    h1 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    h2 {
-        font-size: 18px;
-        line-height: 25px;
-    }
 }

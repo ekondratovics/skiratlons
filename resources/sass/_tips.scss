@@ -2,6 +2,17 @@
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 60px 130px 60px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 0 30px 110px 30px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0 15px 110px 15px;
+    }
+
 }
 
 .tips {
@@ -18,169 +29,159 @@
     h1 {
         text-align: right;
         padding: 0 200px 75px 0;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                font-size: 48px;
+                line-height: 57px;
+                text-align: left;
+                padding: 0 0 50px 0;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 24px;
+            line-height: 28px;
+            text-align: left;
+            padding: 0 0 25px 0;
+        }
     }
 }
 
 .tips-content {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(desktop, max) {
+        display: block;
+    }
 }
 
 .tips-left,
 .tips-right {
     width: 460px;
+
+    @include breakpoint(desktop, max) {
+        width: 100%;
+    }
 }
 
 .tips-card {
     position: relative;
     height: 300px;
 
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            height: auto;
+            padding-bottom: 75px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        height: auto;
+        padding-bottom: 55px;
+    }
+
     img {
         position: absolute;
         top: 10px;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                top: 0;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            width: 35px;
+            position: absolute;
+            top: 0;
+        }
     }
 
     .tips-text {
         padding-left: 90px;
 
-        .top {
-            line-height: 32px;
-            padding: 10px 0;
-        }
-
-        .bottom {
-            font-size: 16px;
-            line-height: 25px;
-            color: $color-light-grey;
-        }
-    }
-}
-
-.tips-bottom {
-    position: relative;
-}
-
-.tips-bottom-content {
-    padding-left: 90px;
-
-    img {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .tips-container {
-        padding: 0 30px 110px 30px;
-    }
-
-    .tips h1 {
-        font-size: 48px;
-        line-height: 57px;
-        text-align: left;
-        padding: 0 0 50px 0;
-    }
-
-    .tips-content {
-        display: block;
-    }
-    
-    .tips-left,
-    .tips-right {
-        width: 100%;
-    }
-
-    .tips-card {
-        height: auto;
-        padding-bottom: 75px;
-
-        img {
-            top: 0;
-        }
-
-        .tips-text {
-            h2 {
-                font-size: 36px;
-                line-height: 43px;
-            }
-        
-            .top {
-                padding: 8px 0 0 0;
-            }
-        
-            .bottom {
-                font-size: 16px;
-            }
-        }
-
-        &:last-of-type {
-            padding-bottom: 50px;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .tips-container {
-        padding: 0 15px 110px 15px;
-    }
-
-    .tips h1 {
-        font-size: 24px;
-        line-height: 28px;
-        text-align: left;
-        padding: 0 0 25px 0;
-    }
-
-    .tips-content {
-        display: block;
-    }
-    
-    .tips-left,
-    .tips-right {
-        width: 100%;
-    }
-
-    .tips-card {
-        height: auto;
-        padding-bottom: 55px;
-
-        img {
-            width: 35px;
-            position: absolute;
-            top: 0;
-        }
-
-        .tips-text {
+        @include breakpoint(tablet, max) {
             padding-left: 50px;
-            
-            h2 {
+        }
+
+        h2 {
+            @include breakpoint(tablet, min) {
+                @include breakpoint(desktop, max) {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+            }
+
+            @include breakpoint(tablet, max) {
                 font-size: 20px;
                 line-height: 24px;
             }
-        
-            .top {
+        }
+
+        .top {
+            line-height: 32px;
+            padding: 10px 0;
+
+            @include breakpoint(tablet, min) {
+                @include breakpoint(desktop, max) {
+                    padding: 8px 0 0 0;
+                }
+            }
+
+            @include breakpoint(tablet, max) {
                 padding: 8px 0 5px 0;
                 font-size: 16px;
                 line-height: 25px;
             }
         }
 
-        &:last-of-type {
-            padding-bottom: 50px;
+        .bottom {
+            font-size: 16px;
+            line-height: 25px;
+            color: $color-light-grey;
+
+            @include breakpoint(tablet, min) {
+                @include breakpoint(desktop, max) {
+                    font-size: 16px;
+                }
+            }
         }
     }
 
-    .tips-bottom p {
-        font-size: 16px;
-        line-height: 25px;
+    &:last-of-type {
+        @include breakpoint(desktop, max) {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.tips-bottom {
+    position: relative;
+
+    p {
+        @include breakpoint(tablet, max) {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+}
+
+.tips-bottom-content {
+    padding-left: 90px;
+
+    @include breakpoint(tablet, max) {
+        padding-left: 0;
     }
 
-    .tips-bottom-content {
-        padding-left: 0;
-        
-        img {
+    img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include breakpoint(tablet, max) {
             width: 57px;
             padding-bottom: 22px;
             position: static;

@@ -4,6 +4,16 @@
     margin: 70px auto 145px auto;
     max-width: 1320px;
     height: auto;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            margin: 45px auto 60px auto;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        margin: 70px auto 15px auto;
+    }
 }
 
 .warmup {
@@ -13,16 +23,51 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(desktop, max) {
+        height: auto;
+        display: block;
+    }
 }
 
 .warmup-left {
     max-width: 458px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            float: right;
+            max-width: auto;
+            padding-left: 80px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        max-width: none;
+        padding: 0 15px;
+        width: 100%;
+    }
 }
 
 .warmup-img {
     position: relative;
     top: -70px;
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            width: 282px;
+            position: relative;
+            right: 40px;
+            top: -45px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        max-width: 290px;
+        position: relative;
+        top: -70px;
+        margin: 0 auto;
+    }
 
     img {
         width: 100%;
@@ -45,6 +90,12 @@
         padding: 0 50px 32px 50px;
         line-height: 48px;
         margin-top: auto;
+
+        @include breakpoint(desktop, max) {
+            font-size: 20px;
+            line-height: 28px;
+            padding: 0 30px 30px 30px;
+        }
     }
 }
 
@@ -52,8 +103,31 @@
     padding: 121px 0 0 0;
     width: 610px;
 
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 80px 40px 35px 40px;
+            width: 100%;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0 15px 35px 15px;
+        width: 100%;
+    }
+
     h1 {
         padding: 0 0 25px 60px;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                font-size: 48px;
+                line-height: 57px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            padding: 0 0 30px 0;
+        }
     }
 }
 
@@ -61,16 +135,38 @@
     display: flex;
     padding-bottom: 45px;
 
+    @include breakpoint(tablet, max) {
+        padding-bottom: 30px;
+    }
+
     h1 {
         color: $color-grass;
         padding: 0 30px 0 0;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                font-size: 36px;
+                line-height: 36px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 24px;
+            line-height: 28px;
+            padding: 0 15px 0 0;
+        }
     }
 
     h2 {
-        font-family: "Fira Sans";
+        font-family: $font-family-body;
         font-size: 24px;
         line-height: 32px;
         padding-bottom: 6px;
+
+        @include breakpoint(tablet, max) {
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
 
     p {
@@ -102,6 +198,13 @@
 	align-items: center;
 	justify-content: center;
 
+    @include breakpoint(tablet, max) {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
     img {
         vertical-align: middle;
     }
@@ -118,146 +221,17 @@
     padding-right: 65px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .warmup-container {
-        margin: 45px auto 60px auto;
-    }
-    
-    .warmup {
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    .warmup-left {
-        float: right;
-        max-width: auto;
-        padding-left: 80px;
-    }
-    
-    .warmup-img {
-        width: 282px;
-        position: relative;
-        right: 40px;
-        top: -45px;
-    
-        img {
-            width: 100%;
-        }
-    }
-    
-    .warmup-img-text h2 {
-        font-size: 20px;
-        line-height: 28px;
-        padding: 0 30px 30px 30px;
-    }
-    
-    .warmup-right {
-        padding: 80px 40px 35px 40px;
-        width: 100%;
-    
-        h1 {
-            font-size: 48px;
-            line-height: 57px;
-            padding: 0 0 25px 60px;
-        }
-    }
-    
-    .warmup-card {
-        display: flex;
-        padding-bottom: 45px;
-    
-        h1 {
-            font-size: 36px;
-            line-height: 36px;
-            padding: 0 30px 0 0;
-        }
-    }
-    
-    .warmup-card-text .two {
-        p {
-            padding-bottom: 12px;
-        }
-        
-        a {
-            text-transform: uppercase;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .warmup-container {
-        margin: 70px auto 15px auto;
-    }
-    
-    .warmup {
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    .warmup-left {
-        max-width: none;
-        padding: 0 15px;
-        width: 100%;
-    }
-    
-    .warmup-img {
-        max-width: 290px;
-        position: relative;
-        top: -70px;
-        margin: 0 auto;
-    }
-    
-    .warmup-img-text h2 {
-        font-size: 20px;
-        line-height: 28px;
-        padding: 0 30px 30px 30px;
-    }
-    
-    .warmup-right {
-        padding: 0 15px 35px 15px;
-        width: 100%;
-    
-        h1 {
-            padding: 0 0 30px 0;
-        }
-    }
-    
-    .warmup-card {
-        display: flex;
-        padding-bottom: 30px;
-    
-        h1 {
-            font-size: 24px;
-            line-height: 28px;
-            padding: 0 15px 0 0;
-        }
-
-        h2 {
-            font-size: 20px;
-            line-height: 32px;
-        }
-    }
-
-    .warmup-mask {
-        background-color: $color-pale-green;
-        height: auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-
-    .warmup-mask-left,
-    .warmup-mask-right {
+.warmup-mask-left,
+.warmup-mask-right {
+    @include breakpoint(tablet, max) {
         display: flex;
         align-items: flex-start;
         padding: 35px 30px;
     }
+}
 
-    .warmup-mask-right {
+.warmup-mask-right {
+    @include breakpoint(tablet, max) {
         padding-top: 0;
     }
 }

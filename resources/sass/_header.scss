@@ -3,6 +3,17 @@
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 60px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            max-width: 1024px;
+            padding: 0 15px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0 15px;
+    }
 }
 
 header {
@@ -16,6 +27,11 @@ header {
         top: 28px;
         left: -30px;
         transform: translate(-50%, -50%);
+
+        @include breakpoint(desktop, max) {
+            left: 0;
+            transform: translate(0, -50%);
+        }
     }
 
     .short-lines {
@@ -23,6 +39,17 @@ header {
         height: auto;
         position: absolute;
         left: 162px;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                left: 77px;
+            }
+        }
+
+        @include breakpoint(desktop, max) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     .menu-icon {
@@ -34,6 +61,16 @@ header {
         top: 28px;
         transform: translateY(-50%);
         cursor: pointer;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                display: block;
+            }
+        }
+
+        @include breakpoint(desktop, max) {
+            display: block;
+        }
 
         span {
             display: block;
@@ -82,50 +119,6 @@ header {
                 width: 0%;
                 left: 50%;
             }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header-container {
-        max-width: 1024px;
-        padding: 0 15px;
-    }
-
-    header {
-        a {
-            left: 0;
-            transform: translate(0, -50%);
-        }
-
-        .short-lines {
-            left: 77px;
-        }
-
-        .menu-icon {
-            display: block;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .header-container {
-        padding: 0 15px;
-    }
-
-    header {
-        a {
-            left: 0;
-            transform: translate(0, -50%);
-        }
-
-        .short-lines {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .menu-icon {
-            display: block;
         }
     }
 }

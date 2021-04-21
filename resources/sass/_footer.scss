@@ -30,39 +30,36 @@
 		justify-content: space-between;
 		align-items: center;
 
+        @include breakpoint(tablet, max) {
+            flex-direction: column-reverse;
+		    align-items: initial;
+        }
+
 		h1 {
 			color: $color-dark-green;
 			font-size: 24px;
 			padding-bottom: 10px;
 			text-transform: uppercase;
+
+            @include breakpoint(tablet, max) {
+                font-size: 18px;
+                line-height: 20px;
+                padding-bottom: 5px;
+            }
 		}
 
 		a {
 			color: #fff;
-			font-family: "Rubik", sans-serif;
+			font-family: $font-family-heading;
 			font-size: 20px;
 			padding-right: 20px;
 			text-decoration: none;
+
+            @include breakpoint(tablet, max) {
+                display: block;
+                font-size: 16px;
+                line-height: 20px;
+            }
 		}
 	}
 }
-
-@media (max-width: 767px) {
-	.footer-container .bottom {
-		flex-direction: column-reverse;
-		align-items: initial;
-
-		.left h1 {
-			font-size: 18px;
-			line-height: 20px;
-			padding-bottom: 5px;
-		}
-
-		.contacts a {
-			display: block;
-			font-size: 16px;
-			line-height: 20px;
-		}
-	}
-}
-

@@ -3,12 +3,20 @@
     max-width: 1440px;
     padding: 0 60px;
     overflow: hidden;
+
+    @include breakpoint(desktop, max) {
+        padding: 0 15px;
+    }
 }
 
 .stats {
     max-width: 1320px;
     height: 704px;
     position: relative;
+
+    @media (max-width: 1379px) {
+        height: auto;
+    }
 }
 
 .stats-content {
@@ -17,10 +25,40 @@
     left: 162px;
     top: -1px;
     display: flex;
+
+    @media (max-width: 1379px) {
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .stats-spinner {
     z-index: 10;
+
+    @include breakpoint(desktop, min) {
+        @media (max-width: 1379px) {
+            position: absolute;
+            left: 162px;
+            top: -102px;
+        }
+    }
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            position: absolute;
+            left: 77px;
+            top: -102px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        position: absolute;
+        left: -99px;
+        top: -237px;
+    }
 }
 
 .stats-text-left {
@@ -38,16 +76,27 @@
     h2 {
         color: $color-dark-green;
         line-height: 36px;
+
+        @include breakpoint(desktop, max) {
+            font-size: 36px;
+            line-height: 36px;
+        }
     }
 
     span {
-        font-family: "Fira Sans", sans-serif;
+        font-family: $font-family-body;
         font-size: 16px;
         line-height: 40px;
         color: #749b70;
         text-decoration: underline;
         text-transform: uppercase;
         cursor: pointer;
+
+        @include breakpoint(desktop, max) {
+            line-height: 40px;
+            color: color-pale-green;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -58,15 +107,59 @@
     top: 357px;
     left: 60px;
 
+    @include breakpoint(desktop, min) {
+        @media (max-width: 1379px) {
+            padding-top: 632px;
+            max-width: 100%;
+            height: auto;
+            position: static;
+        }
+    }
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding-top: 632px;
+            max-width: 100%;
+            height: auto;
+            position: static;
+            z-index: -3;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding-top: 497px;
+        max-width: 100%;
+        height: auto;
+        position: static;
+    }
+
     h2 {
         color: $color-dark-green;
         padding-bottom: 24px;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                font-size: 36px;
+                padding-bottom: 11px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 24px;
+            line-height: 28px;
+            padding-bottom: 11px;
+        }
     }
 
     p {
         color: $color-grey;
         font-size: 21px;
         line-height: 35px;
+
+        @include breakpoint(tablet, max) {
+            font-size: 18px;
+            line-height: 30px;
+        }
     }
 }
 
@@ -78,178 +171,8 @@
     transform: translateX(-100%);
     height: 8px;
     width: 28px;
-}
 
-@media (min-width: 1025px) and (max-width: 1379px) {
-    .stats {
-        height: auto;
-        position: relative;
-    }
-
-    .stats-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .stats-spinner {
-        position: absolute;
-        left: 162px;
-        top: -102px;
-    }
-    
-    .stats-text-left {
-        text-align: center;
-        position: absolute;
-        top: 356px;
-        left: 169px;
-    }
-
-    .stats-text-right {
-        padding-top: 632px;
-        max-width: 100%;
-        height: auto;
-        position: static;
-    }
-    
-    .hyphen {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .stats-container {
-        padding: 0 15px;
-    }
-
-    .stats {
-        height: auto;
-        position: relative;
-    }
-
-    .stats-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .stats-spinner {
-        position: absolute;
-        left: 77px;
-        top: -102px;
-    }
-    
-    .stats-text-left {
-        text-align: center;
-        position: absolute;
-        top: 356px;
-        left: 169px;
-
-        h1 {
-            font-size: 72px;
-            line-height: 72px;
-        }
-    
-        h2 {
-            font-size: 36px;
-            line-height: 36px;
-        }
-    
-        span {
-            line-height: 40px;
-            color: color-pale-green;
-            text-transform: uppercase;
-        }
-    }
-
-    .stats-text-right {
-        padding-top: 632px;
-        max-width: 100%;
-        height: auto;
-        position: static;
-        z-index: -3;
-
-        h2 {
-            font-size: 36px;
-            padding-bottom: 11px;
-        }
-    }
-    
-    .hyphen {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .stats-container {
-        padding: 0 15px;
-    }
-
-    .stats {
-        height: auto;
-        position: relative;
-    }
-
-    .stats-content {
-        position: relative;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .stats-spinner {
-        position: absolute;
-        left: -99px;
-        top: -237px;
-    }
-    
-    .stats-text-left {
-        text-align: center;
-        position: absolute;
-        top: 356px;
-        left: 169px;
-
-        h1 {
-            font-size: 72px;
-            line-height: 72px;
-        }
-    
-        h2 {
-            font-size: 36px;
-            line-height: 36px;
-        }
-    
-        span {
-            line-height: 40px;
-            color: $color-pale-green;
-            text-transform: uppercase;
-        }
-    }
-
-    .stats-text-right {
-        padding-top: 497px;
-        max-width: 100%;
-        height: auto;
-        position: static;
-
-        h2 {
-            font-size: 24px;
-            line-height: 28px;
-            padding-bottom: 11px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 30px;
-        }
-    }
-    
-    .hyphen {
+    @media (max-width: 1379px) {
         display: none;
     }
 }
@@ -319,7 +242,7 @@ body.open {
         display: none;
         width: 100%;
         
-        @media (min-width: 768px) {
+        @include breakpoint(tablet, min) {
             display: block;
         }
     }
@@ -328,7 +251,7 @@ body.open {
         display: none;
         width: 100%;
     
-        @media (max-width: 767px) {
+        @include breakpoint(tablet, max) {
             display: block;
         }
     }

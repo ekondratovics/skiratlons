@@ -1,12 +1,41 @@
 .disciplines-container {
     margin-bottom: 120px;
+
+    @include breakpoint(desktop, max) {
+        margin-bottom: 60px;
+    }
 }
 
-.disciplines-container-tabs,
+.disciplines-container-tabs {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 15px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 0 40px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0;
+    }
+}
+
 .disciplines-container-content {
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 15px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 0;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        padding: 0;
+    }
 }
 
 .disciplines-tabs,
@@ -29,23 +58,55 @@
     cursor: pointer;
     transition: all 0.3s linear;
 
-   	.tabs-button-imgs {
-		display: flex;
-		justify-content: center;
-		margin-right: 20px;
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 39px 34px 37px;
+        }
+    }
 
-	  	svg {
-			width: 36px;
-			margin-left: 5px;
-      	}
+    @include breakpoint(tablet, max) {
+        padding: 0;
+		flex-direction: column;
+    }
+
+   	.tabs-button-imgs {
+        @include breakpoint(tablet, min) {
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+
+            svg {
+                width: 36px;
+                margin-left: 5px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            margin: 0;
+
+            svg {
+                width: 27px;
+            }
+        }
   	}
 
-	h1 {
-		color: $color-dark-green;
-		font-size: 18px;
-		text-align: center;
-		text-transform: uppercase;
-		transition: all 0.3s linear;
+    h1 {
+        color: $color-dark-green;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.3s linear;
+
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                line-height: 22px;
+            }
+        }
+
+        @include breakpoint(tablet, max) {
+            font-size: 16px;
+			line-height: 19px;
+        }
 	}
 }
 
@@ -73,7 +134,11 @@
 }
 
 .disciplines {
-  	display: none;
+    display: none;
+  	
+    @include breakpoint(tablet, max) {
+        overflow-x: auto;
+    }
 }
 
 .disciplines.two.active,
@@ -90,9 +155,19 @@
 }
 
 .discipline {
-	color: $color-base-white;
-	border-right: 1px solid $color-forest-green;
-	padding: 0 60px;
+    color: $color-base-white;
+    border-right: 1px solid $color-forest-green;
+    padding: 0 60px;
+
+    @include breakpoint(desktop, max) {
+        .discipline {
+            padding: 0 16px;
+    
+            .heading img {
+                display: none;
+            }
+        }
+    }
 
 	.discipline-img {
 		display: flex;
@@ -107,7 +182,7 @@
 	}
 
 	h2 {
-		font-family: "Fira Sans", sans-serif;
+		font-family: $font-family-body;
 		font-size: 24px;
 		line-height: 32px;
 		padding-left: 24px;
@@ -191,76 +266,5 @@
 		color: #fff;
 		text-transform: uppercase;
 		padding-left: 20px;
-	}
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-	.disciplines-container {
-		margin-bottom: 60px;
-	}
-
-	.disciplines-container-content {
-		padding: 0;
-	}
-
-	.disciplines-container-tabs {
-		padding: 0 40px;
-	}
-
-	.tabs-button {
-		padding: 39px 34px 37px;
-
-		h1 {
-			line-height: 22px;
-		}
-	}
-
-	.discipline {
-		padding: 0 16px;
-
-		.heading img {
-			display: none;
-		}
-	}
-}
-
-@media (max-width: 767px) {
-	.disciplines-container {
-		margin-bottom: 60px;
-	}
-
-	.disciplines-container-content,
-	.disciplines-container-tabs {
-		padding: 0;
-	}
-
-	.tabs-button {
-		padding: 0;
-		flex-direction: column;
-
-		.tabs-button-imgs {
-			margin: 0;
-
-			svg {
-				width: 27px;
-			}
-		}
-
-		h1 {
-			font-size: 16px;
-			line-height: 19px;
-		}
-	}
-
-	.disciplines {
-		overflow-x: auto;
-	}
-
-	.discipline {
-		padding: 0 16px;
-
-		.heading img {
-			display: none;
-		}
 	}
 }

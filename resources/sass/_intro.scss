@@ -3,6 +3,20 @@
     max-width: 1440px;
     height: 500px;
     padding: 0 60px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            padding: 0 15px;
+            margin-bottom: 95px;
+            height: 330px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        height: 100%;
+        padding: 0 15px;
+        margin-bottom: 95px;
+    }
 }
 
 .intro {
@@ -15,18 +29,62 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            height: 330px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        display: block;
+        text-align: center;
+        height: auto;
+    }
 }
 
 .intro-banner {
     height: 274px;
     width: auto;
     padding-left: 102px;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            height: 196px;
+            padding-left: 50px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        height: 160px;
+        padding: 25px 0 0 0;
+    }
 }
 
 .intro-text {
     width: 750px;
     text-align: right;
     padding-right: 10%;
+
+    @include breakpoint(tablet, min) {
+        @include breakpoint(desktop, max) {
+            width: 430px;
+            padding-right: 0;
+            margin-right: 50px;
+        }
+    }
+
+    @include breakpoint(tablet, max) {
+        width: auto;
+        text-align: center;
+        padding: 23px 15px 35px 15px;
+    }
+
+    h1 {
+        @include breakpoint(desktop, max) {
+            padding-bottom: 14px;
+        }
+    }
 }
 
 .long-lines-container {
@@ -37,70 +95,20 @@
         height: auto;
         position: absolute;
         left: 162px;
-    }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .intro-container {
-        padding: 0 15px;
-        margin-bottom: 95px;
-        height: 330px;
-    }
+        @include breakpoint(tablet, min) {
+            @include breakpoint(desktop, max) {
+                left: 77px;
+                top: -48px;
+                z-index: -2;
+            }
+        }
 
-    .intro {
-        height: 330px;
-    }
-
-    .intro-banner {
-        height: 196px;
-        padding-left: 50px;
-    }
-
-    .intro-text {
-        width: 430px;
-        padding-right: 0;
-        margin-right: 50px;
-    }
-
-    .long-lines-container img {
-        left: 77px;
-        top: -48px;
-        z-index: -2;
-    }
-}
-
-@media (max-width: 767px) {
-    .intro-container {
-        height: 100%;
-        padding: 0 15px;
-        margin-bottom: 95px;
-    }
-
-    .intro {
-        display: block;
-        text-align: center;
-        height: auto;
-    }
-
-    .intro-banner {
-        height: 160px;
-        padding: 25px 0 0 0;
-    }
-
-    .intro-text {
-        width: auto;
-        text-align: center;
-        padding: 23px 15px 35px 15px;
-    }
-
-    .intro-text h1 {
-        padding-bottom: 14px;
-    }
-
-    .long-lines-container img {
-        left: 50%;
-        transform: translateX(-50%);
-        top: -48px;
-        z-index: -2;
+        @include breakpoint(tablet, max) {
+            left: 50%;
+            transform: translateX(-50%);
+            top: -48px;
+            z-index: -2;
+        }
     }
 }
