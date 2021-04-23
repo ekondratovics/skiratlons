@@ -1,10 +1,10 @@
 let disciplinesToggleForbidden = () => {
-    let forbiddenHeading = document.getElementsByClassName("forbidden"),
-        forbiddenList = document.getElementsByClassName("minus");
+    let heading = document.querySelectorAll(".forbidden"),
+        list = document.querySelectorAll(".minus");
 
-    for (let i=0; i<forbiddenHeading.length; i++) {
-        forbiddenHeading[i].addEventListener("click", function() {
-            forbiddenList[i].classList.toggle("open");
+    for (let i=0; i<heading.length; i++) {
+        heading[i].addEventListener("click", () => {
+            list[i].classList.toggle("open");
         });
     }
 }

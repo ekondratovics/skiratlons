@@ -1,22 +1,22 @@
 let disciplinesSwitchTabs = () => {
-    let disciplineTab = document.getElementsByClassName("tabs-button"),
-        disciplineContent = document.getElementsByClassName("disciplines");
+    let tabs = document.querySelectorAll(".tabs-button"),
+        content = document.getElementsByClassName("disciplines");
     
-    let disciplineTabAddEventListener = (active, inactive) => {
-        disciplineTab[active].addEventListener("click", () => {
-            if (!disciplineTab[active].classList.contains("active")) {
+    let tabsAddEventListener = (active, inactive) => {
+        tabs[active].addEventListener("click", () => {
+            if (!tabs[active].classList.contains("active")) {
                 let toggleActive = (target) => {
                     target[active].classList.add("active");
                     target[inactive].classList.remove("active");
                 };
-                toggleActive(disciplineTab);
-                toggleActive(disciplineContent);
+                toggleActive(tabs);
+                toggleActive(content);
             }
         });
     }
 
-    disciplineTabAddEventListener(0, 1);
-    disciplineTabAddEventListener(1, 0);
+    tabsAddEventListener(0, 1);
+    tabsAddEventListener(1, 0);
 }
 
 export { disciplinesSwitchTabs };
