@@ -8,11 +8,10 @@ let hamburgerMenu = () => {
         navCircles = document.querySelectorAll(".nav-circle");
 
         menuIcon.addEventListener("click", function() {
-        menuIcon.classList.toggle("menu-open");
-        shortLines.classList.toggle("menu-open");
-        menuBody.classList.toggle("menu-open");
-        navContainer.classList.toggle("menu-open");
-    });
+            [menuIcon, shortLines, menuBody, navContainer].forEach((item) => {
+                item.classList.toggle("menu-open");
+            });
+        });
 
     let menuSetInitialClasses = () => {
         if(menuBody.className === "menu-open") {

@@ -1,40 +1,33 @@
 let faqAccordize = () => {
-    let accordionHeading = document.getElementsByClassName("question"),
-        accordionButton = document.getElementsByClassName("faq-button");
-    
-    function removeOpen(index) {
-        accordionHeading[index].classList.remove("open");
-        accordionButton[index].classList.remove("open");
-    }
-    
-    function toggleOpen(index) {
-        accordionHeading[index].classList.toggle("open");
-        accordionButton[index].classList.toggle("open");
-    }
-    
-    for (let i = 0; i < accordionHeading.length; i++) {
-        accordionHeading[i].addEventListener("click", function () {
-            for (let i2 = 0; i2 < accordionHeading.length; i2++) {
-                if (accordionHeading[i2] !== this) {
-                    removeOpen(i2);
-                } else {
-                    toggleOpen(i2);
-                }
-            }
-        });
-    }
-    
-    for (let i = 0; i < accordionButton.length; i++) {
-        accordionButton[i].addEventListener("click", function () {
-            for (let i2 = 0; i2 < accordionButton.length; i2++) {
-                if (accordionButton[i2] !== this) {
-                    removeOpen(i2);
-                } else {
-                    toggleOpen(i2);
-                }
-            }
-        });
-    }
-}
+    let headings = document.querySelectorAll(".question"),
+        buttons = document.querySelectorAll(".faq-button");
 
+    let removeOpen = (index) => {
+        headings[index].classList.remove("open");
+        buttons[index].classList.remove("open");
+    }
+    
+    let toggleOpen = (index) => {
+        headings[index].classList.toggle("open");
+        buttons[index].classList.toggle("open");
+    }
+    
+    let listenTo = (target) => {
+        target.forEach((item) => {
+            item.addEventListener("click", function () {
+                headings.forEach((item2, index) => {
+                    if (item2 !== this) {
+                        removeOpen(index);
+                    } else {
+                        toggleOpen(index);
+                    }
+                });
+            });
+        });
+    }
+
+    listenTo(buttons);
+    listenTo(headings);
+}
+      
 export { faqAccordize };
