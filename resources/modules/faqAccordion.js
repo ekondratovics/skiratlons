@@ -15,7 +15,7 @@ let faqAccordize = () => {
     let listenTo = (target) => {
         target.forEach((item) => {
             item.addEventListener("click", function () {
-                headings.forEach((item2, index) => {
+                target.forEach((item2, index) => {
                     if (item2 !== this) {
                         removeOpen(index);
                     } else {
