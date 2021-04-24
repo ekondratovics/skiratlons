@@ -46,7 +46,7 @@ header {
             }
         }
 
-        @include breakpoint(desktop, max) {
+        @include breakpoint(tablet, max) {
             left: 50%;
             transform: translateX(-50%);
         }
