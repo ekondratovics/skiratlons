@@ -9,26 +9,25 @@ let videoModal = () => {
         body = document.querySelector("body"),
         youTubeIframe = document.querySelector(".watch-video iframe");
 
-    let addOpenToClassList = (target) => {
-        target.classList.add("open");
+    let addOpenToClassList = (...args) => {
+        args.forEach( (item) => {
+            item.classList.add("open");
+        })
     }
 
     let openModalLeft = (videoIndex) => {
         youTubeIframe.setAttribute("src", videoIndex);
-        addOpenToClassList(modal);
-        addOpenToClassList(body);
+        addOpenToClassList(modal, body);
     }
 
     let openModalRight = (videoIndex) => {
         youTubeIframe.setAttribute("src", videoIndex);
-        addOpenToClassList(modal);
-        addOpenToClassList(body);
+        addOpenToClassList(modal, body);
     }
 
     let openModalMobile = (videoIndex) => {
         youTubeIframe.setAttribute("src", videoIndex);
-        addOpenToClassList(modal);
-        addOpenToClassList(body);
+        addOpenToClassList(modal, body);
     }
 
     let closeModal = () => {
