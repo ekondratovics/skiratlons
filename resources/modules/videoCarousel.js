@@ -1,82 +1,93 @@
 let videoCarousel = () => {
-    let mediaQueryCarousel = window.matchMedia("(min-width: 1025px)");
+    let mediaQuery = window.matchMedia("(min-width: 1025px)");
 
-    let carouselItemsLeft = document.querySelectorAll(".left-bottom-item.desktop"),
-        carouselItemsRight = document.querySelectorAll(".right-bottom-item"),
-        totalItemsDesktop = carouselItemsLeft.length,
-        carouselDotsDesktop = document.querySelectorAll(".dot-button.desktop"),
+    let itemsLeft = document.querySelectorAll(".left-bottom-item.desktop"),
+        itemsRight = document.querySelectorAll(".right-bottom-item"),
+        totalItemsDesktop = itemsLeft.length,
+        dots = document.querySelector(".dots"),
         currentSlide = 0;
 
-    let carouselItemsMobile = document.querySelectorAll(".left-bottom-item.mobile"),
-        totalItemsMobile = carouselItemsMobile.length,
-        carouselDotsMobile = document.querySelectorAll(".dot-button.mobile");
-
-    let setInitialClassesDesktop = () => {
-        for(let i=0; i<totalItemsDesktop; i++) {
-            carouselItemsLeft[i].className = "left-bottom-item desktop";
-            carouselItemsRight[i].className = "right-bottom-item";
-            carouselDotsDesktop[i].className = "dot-button desktop";
-        }
-    }
-
-    let setInitialClassesMobile = () => {
-        for(let i=0; i<totalItemsMobile; i++) {
-            carouselItemsMobile[i].className = "left-bottom-item mobile";
-            carouselDotsMobile[i].className = "dot-button mobile";
-        }
-    }
+    let itemsMobile = document.querySelectorAll(".left-bottom-item.mobile"),
+        totalItemsMobile = itemsMobile.length;
 
     let setInitialClasses = () => {
-        currentSlide = 0;
-        setInitialClassesDesktop();
-        setInitialClassesMobile();
-        carouselDotsDesktop[0].classList.add("active");
-        carouselDotsMobile[0].classList.add("active");
+        itemsLeft.forEach( (item) => {
+            item.className = "left-bottom-item desktop";
+        });
+        itemsRight.forEach( (item) => {
+            item.className = "right-bottom-item";
+        });
+        itemsMobile.forEach( (item) => {
+            item.className = "left-bottom-item mobile";
+        });
+        document.querySelectorAll(".dot-button").forEach( (item) => {
+            item.className = "dot-button";
+        });
+    }
 
-        if (mediaQueryCarousel.matches) {
-            carouselItemsLeft[0].classList.add("active");
-            carouselItemsRight[0].classList.add("active");
-        } else {
-            carouselItemsMobile[0].classList.add("active");
+    let addActiveToClassList = (...args) => {
+        args.forEach( (item) => {
+            item.classList.add("active");
+        });
+    }
+
+    let setInitialState = () => {
+        dots.innerHTML = "";
+        let createDots = (howMany) => {
+            for(let i=0; i<howMany; i++) {
+                let dot = document.createElement("div");
+                dot.classList.add("dot-button");
+                dots.appendChild(dot);
+            }
         }
+
+        currentSlide = 0;
+
+        setInitialClasses();
+
+        if (mediaQuery.matches) {
+            createDots(totalItemsDesktop);
+            addActiveToClassList(itemsLeft[0], itemsRight[0], document.querySelector(".dot-button"));
+        } else {
+            createDots(totalItemsMobile);
+            addActiveToClassList(itemsMobile[0], document.querySelector(".dot-button"));
+        }
+
+        let setCarouselEventListeners = () => {
+            let prev = document.querySelector(".button-prev"),
+                next = document.querySelector(".button-next");
+    
+            prev.addEventListener("click", prevSlide);
+            next.addEventListener("click", nextSlide);
+    
+            let dotSlide = (num) => {
+                changeSlides(num);
+            }
+    
+            document.querySelectorAll(".dot-button").forEach( (dot, index) => {
+                dot.addEventListener("click", function () {
+                    dotSlide(index);
+                    currentSlide = index;
+                });
+            });
+        }
+        setCarouselEventListeners();
     }
 
-    mediaQueryCarousel.addListener(setInitialClasses);
-
-    let setCarouselEventListenersDesktop = () => {
-        let prev = document.getElementsByClassName("button-prev")[0],
-            next = document.getElementsByClassName("button-next")[0];
-
-        prev.addEventListener("click", prevSlide);
-        next.addEventListener("click", nextSlide);
-
-        carouselDotsDesktop[0].addEventListener("click", firstSlide);
-        carouselDotsDesktop[1].addEventListener("click", secondSlide);
-        carouselDotsDesktop[2].addEventListener("click", thirdSlide);
-
-        carouselDotsMobile[0].addEventListener("click", firstSlide);
-        carouselDotsMobile[1].addEventListener("click", secondSlide);
-        carouselDotsMobile[2].addEventListener("click", thirdSlide);
-        carouselDotsMobile[3].addEventListener("click", fourthSlide);
-        carouselDotsMobile[4].addEventListener("click", fifthSlide);
-        carouselDotsMobile[5].addEventListener("click", sixthSlide);
-    }
+    mediaQuery.addListener(setInitialState);
 
     let changeSlides = (slideIndex) => {
-        if (mediaQueryCarousel.matches) {
-            setInitialClassesDesktop();
-            carouselItemsLeft[slideIndex].classList.add("active");
-            carouselItemsRight[slideIndex].classList.add("active");
-            carouselDotsDesktop[slideIndex].classList.add("active");
+        setInitialClasses();
+        
+        if (mediaQuery.matches) {
+            addActiveToClassList(itemsLeft[slideIndex], itemsRight[slideIndex], document.querySelectorAll(".dot-button")[slideIndex]);
         } else {
-            setInitialClassesMobile();
-            carouselItemsMobile[slideIndex].classList.add("active");
-            carouselDotsMobile[slideIndex].classList.add("active");
+            addActiveToClassList(itemsMobile[slideIndex], document.querySelectorAll(".dot-button")[slideIndex]);
         }
     }
 
     let nextSlide = () => {
-        if (mediaQueryCarousel.matches) {
+        if (mediaQuery.matches) {
             if (currentSlide === (totalItemsDesktop - 1)) {
                 currentSlide = 0;
             } else {
@@ -94,7 +105,7 @@ let videoCarousel = () => {
     }
 
     let prevSlide = () => {
-        if (mediaQueryCarousel.matches) {
+        if (mediaQuery.matches) {
             if (currentSlide === 0) {
                 currentSlide = (totalItemsDesktop - 1)
             } else {
@@ -111,46 +122,7 @@ let videoCarousel = () => {
         }
     }
 
-    let dotSlide = (num) => {
-        changeSlides(num);
-    }
-
-    let firstSlide = () => {
-        dotSlide(0);
-        currentSlide = 0;
-    }
-
-    let secondSlide = () => {
-        dotSlide(1);
-        currentSlide = 1;
-    }
-
-    let thirdSlide = () => {
-        dotSlide(2);
-        currentSlide = 2;
-    }
-
-    let fourthSlide = () => {
-        dotSlide(3);
-        currentSlide = 3;
-    }
-
-    let fifthSlide = () => {
-        dotSlide(4);
-        currentSlide = 4;
-    }
-
-    let sixthSlide = () => {
-        dotSlide(5);
-        currentSlide = 5;
-    }
-
-    let launchCarousel = () => {
-        setInitialClasses();
-        setCarouselEventListenersDesktop();
-    }
-
-    launchCarousel();
+    setInitialState();
 }
 
 export { videoCarousel };

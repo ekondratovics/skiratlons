@@ -177,16 +177,6 @@
     width: 80px;
 
     @include breakpoint(desktop, max) {
-        display: none;
-    }
-}
-
-.dots-six {
-    display: none;
-
-    @include breakpoint(desktop, max) {
-        display: flex;
-        justify-content: space-between;
         width: 160px;
     }
 
